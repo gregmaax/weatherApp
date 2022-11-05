@@ -11,6 +11,7 @@ export const environment = {
   xRapidAPIKeyHeaderValue: '511b5045fcmsh8586adc1efaeb5ep117cb3jsnb75b0914dcf0'
 };
 
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
