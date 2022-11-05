@@ -1,9 +1,16 @@
+<div id="search"
+    class="w-72 mt-40 mx-auto shadow-sky-800 shadow-lg border-solid border-2 border-slate-600 rounded-full">
+    <form #form="ngForm" (submit)="onSubmit()">
+        <input type="text" name="city" [(ngModel)]="cityName" placeholder="Ville..." class="rounded-full w-full pl-3">
+    </form>
+</div>
+
 <div class="container mx-auto ">
-    <div class="w-72 bg-blue-200 shadow-2xl rounded mx-auto mt-40 h-52">
+    <div class="w-72 bg-blue-200 shadow-2xl rounded mx-auto mt-6 h-52">
         <div id="weather-data">
             <div id="location" class="mx-auto text-center font-sans font-semibold h-16 text-xl">
                 {{weatherData.location.name}}</div>
-            <div id="temperature" class="mx-auto text-center font-sans h-36 text text-3xl">
+            <div id="temperature" class="mx-auto text-center font-sans h-36 text text-5xl">
                 {{weatherData.current.temp_c}}°C
             </div>
         </div>
