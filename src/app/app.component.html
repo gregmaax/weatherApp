@@ -1,68 +1,43 @@
-<div id="search"
-    class="w-72 mt-40 mx-auto shadow-sky-800 shadow-lg border-solid border-2 border-slate-600 rounded-full">
-    <form #form="ngForm" (submit)="onSubmit()">
-        <input type="text" name="city" [(ngModel)]="cityName" placeholder="Ville..." class="rounded-full w-full pl-3">
-    </form>
-</div>
+<div class="root">
+    <div id="search"
+        class="w-72 mt-40 mx-auto shadow-sky-800 shadow-lg border-solid border-2 border-slate-600 rounded-full">
+        <form #form="ngForm" (submit)="onSubmit()">
+            <input type="text" name="city" [(ngModel)]="cityName" placeholder="Ville..."
+                class="rounded-full w-full pl-3">
+        </form>
+    </div>
 
-<div class="container mx-auto ">
-    <div class="w-72 bg-blue-200 shadow-2xl rounded mx-auto mt-6 h-52">
-        <div id="weather-data">
-            <div id="location" class="mx-auto text-center font-sans font-semibold h-16 text-xl">
-                {{weatherData.location.name}}</div>
-            <div id="temperature" class="mx-auto text-center font-sans h-36 text text-5xl">
-                {{weatherData.current.temp_c}}°C
+    <div class="container mx-auto ">
+        <div class="w-72 bg-blue-200 shadow-2xl rounded mx-auto mt-6 h-52">
+            <div id="weather-data">
+                <div id="location" class="mx-auto text-center font-sans font-semibold h-16 text-xl">
+                    {{weatherData.location.name}}</div>
+                <div id="temperature" class="mx-auto text-center font-sans h-36 text text-5xl">
+                    {{weatherData.current.temp_c}}°C
+                </div>
             </div>
         </div>
-    </div>
-    <div class="w-72 bg-blue-300 shadow-2xl rounded center mx-auto h-32">
-        <div id="plus-informations" class="mx-auto text-center font-sans italic text-sm">Plus d'informations</div>
-        <div id="informations" class="flex flex-wrap">
-            <div id="block-un"
-                class="h-8 w-6/12 content-center text-left mt-2 pl-2 border-r-2 border-dashed border-blue-800">
-                <span>Ressenti : </span>{{weatherData.current.feelslike_c}}°C
-            </div>
-            <div id="block-deux" class="h-8 w-6/12 content-center text-left mt-2 pl-2"> <span>Press. :
-                    {{weatherData.current.pressure_mb}}</span>hPa</div>
-            <div id="block-trois"
-                class="h-8 w-6/12 content-center text-left mt-5 pl-2 border-r-2 border-dashed border-blue-800">Vent :
-                <span>{{weatherData.current.wind_kph}}</span>km/h
-            </div>
-            <div id="block-quatre" class="h-8 w-6/12 content-center text-left mt-5 pl-2">Humidité :
-                <span>{{weatherData.current.humidity}}</span> %
+        <div class="w-72 bg-blue-300 shadow-2xl rounded center mx-auto h-32">
+            <div id="plus-informations" class="mx-auto text-center font-sans italic text-sm">Plus d'informations</div>
+            <div id="informations" class="flex flex-wrap">
+                <div id="block-un"
+                    class="h-8 w-6/12 content-center text-left mt-2 pl-2 border-r-2 border-dashed border-blue-800">
+                    <span>Ressenti : </span>{{weatherData.current.feelslike_c}}°C
+                </div>
+                <div id="block-deux" class="h-8 w-6/12 content-center text-left mt-2 pl-2"> <span>Press. :
+                        {{weatherData.current.pressure_mb}}</span>hPa</div>
+                <div id="block-trois"
+                    class="h-8 w-6/12 content-center text-left mt-5 pl-2 border-r-2 border-dashed border-blue-800">Vent
+                    :
+                    <span>{{weatherData.current.wind_kph}}</span>km/h
+                </div>
+                <div id="block-quatre" class="h-8 w-6/12 content-center text-left mt-5 pl-2">Humidité :
+                    <span>{{weatherData.current.humidity}}</span> %
+                </div>
             </div>
         </div>
     </div>
 </div>
-
-<!-- <div class="container mx-auto ">
-    <div class="w-72 bg-blue-200 shadow-2xl rounded mx-auto mt-40 h-52">
-        <div id="weather-data">
-            <div id="location" class="mx-auto text-center font-sans font-semibold h-16 text-xl">TOULOUSE</div>
-            <div id="temperature" class="mx-auto text-center font-sans h-36 text text-3xl">{{ 12.50 | number:
-                '1.0-0'}}°C
-            </div>
-        </div>
-    </div>
-    <div class="w-72 bg-blue-300 shadow-2xl rounded center mx-auto h-32">
-        <div id="plus-informations" class="mx-auto text-center font-sans italic text-sm">Plus d'informations</div>
-        <div id="informations" class="flex flex-wrap">
-            <div id="block-un"
-                class="h-8 w-6/12 content-center text-left mt-2 pl-2 border-r-2 border-dashed border-blue-800">
-                <span>Ressenti : </span>{{10.2 |
-                number: '1.0-0'}}°C
-            </div>
-            <div id="block-deux" class="h-8 w-6/12 content-center text-left mt-2 pl-2"> <span>Press. :
-                </span>{{1022}}hPa</div>
-            <div id="block-trois"
-                class="h-8 w-6/12 content-center text-left mt-5 pl-2 border-r-2 border-dashed border-blue-800">Vent :
-                <span>25</span>km/h
-            </div>
-            <div id="block-quatre" class="h-8 w-6/12 content-center text-left mt-5 pl-2">Humidité : <span>70</span> %
-            </div>
-        </div>
-    </div>
-</div> -->
 
 
 <router-outlet></router-outlet>
